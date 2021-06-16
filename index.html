@@ -87,11 +87,6 @@
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-<!--                        <li class="sidebar-search">-->
-<!--&lt;!&ndash;                            <div class="input-group custom-search-form">&ndash;&gt;-->
-<!--&lt;!&ndash;                                <input type="text" class="form-control" placeholder="Search..."> &lt;!&ndash; 기능 사용 보류 &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                                <span class="input-group-btn">&ndash;&gt;-->
-
 
                         <li>
                             <a href="index.html"><i class="fa fa-lightbulb-o fa-fw"></i> 설계</a>
@@ -225,60 +220,69 @@
                             <label class="text-white" for="inputEmail1">연면적</label>
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-12">
-                            <label class="text-white" for="inputEmail2">층수</label>
+                            <label class="text-white" for="inputEmail2">최고 층 수</label>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12">
+                            <label class="text-white" for="inputEmail2">최저 층 수</label>
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-12">
                             <label class="text-white" for="inputEmail3">지역</label>
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-12">
-                            <label class="text-white" for="inputEmail3">건물유형</label>
+                            <label class="text-white" for="inputEmail3">건물 유형</label>
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-12">
-                            <label class="text-white" for="inputEmail3">세대수</label>
+                            <label class="text-white" for="inputEmail3">세대 수</label>
                         </div>
-                        <div class="col-lg-2 col-md-2 col-sm-12">
-                            <label class="text-white" for="inputEmail3">구분</label>
-                        </div>
+<!--                        <div class="col-lg-2 col-md-2 col-sm-12">-->
+<!--                            <label class="text-white" for="inputEmail3">구분</label>-->
+<!--                        </div>-->
                     </div>
                     <div class="row">
                         <div class="col-lg-2 col-md-2 col-sm-12 pt-0">
-                            <input type="text" class="form-control search-slt" placeholder="예) 1,350"
-                                   id="param2">
+                            <input type="number" class="form-control search-slt" placeholder="예) 1350"
+                                   id="param2" style="width: 100%;">
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-12">
-                            <input type="text" class="form-control search-slt" placeholder="예) 7">
+                            <input type="number" class="form-control search-slt" placeholder="예) 7" style="width: 100%;">
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12">
+                            <input type="number" class="form-control search-slt" placeholder="예) 7" style="width: 100%;">
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-12">
                             <select class="form-control search-slt" id="exampleFormControlSelect1">
-                                <option>도시 / 농촌</option>
+                                <option>선택하세요</option>
                                 <option>도시</option>
                                 <option>농촌</option>
                             </select>
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-12">
                             <select class="form-control search-slt" id="param1">
-                                <option>주거용 / 상업용</option>
-                                <option>주거용 건물</option>
-                                <option>상업용 건물</option>
+                                <option>선택하세요</option>
+                                <option>주상복합</option>
+                                <option>빌딩</option>
+                                <option>상가</option>
+                                <option>오피스텔</option>
+
                             </select>
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-12">
-                            <input type="text" class="form-control search-slt" placeholder="예) 45">
+                            <input type="number" class="form-control search-slt" placeholder="예) 45">
                         </div>
-                        <div class="col-lg-2 col-md-2 col-sm-12">
-                            <select class="form-control search-slt" id="exampleFormControlSelect1">
-                                <option>시설 구분</option>
-                                <option>초고속</option>
-                                <option>전송</option>
-                                <option>전용</option>
-                                <option>기타</option>
-                            </select>
-                        </div>
+<!--                        <div class="col-lg-2 col-md-2 col-sm-12">-->
+<!--                            <select class="form-control search-slt" id="exampleFormControlSelect1">-->
+<!--                                <option>시설 구분</option>-->
+<!--                                <option>초고속</option>-->
+<!--                                <option>무선</option>-->
+<!--                                <option>전용</option>-->
+<!--                                <option>광전화</option>-->
+<!--                            </select>-->
+<!--                        </div>-->
                     </div>
                     <p style="margin-top:5px;">
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-12">
-                            <button type="button" class="btn btn-info" onclick="btn_click2();">Search
+                            <button type="button" class="btn btn-info" onclick="btn_click2();changeByJS();changeByJS22();" style="padding: 8px 15px;">산출
                             </button>
                             <button type="reset" class="btn btn-info">Reset
                             </button>
@@ -309,34 +313,49 @@
         <thead id="head">
         <tr>
             <th scope="col">순번</th>
-            <th scope="col">주소지</th>
-            <th scope="col">면적</th>
-            <th scope="col">용도</th>
-            <th scope="col">세대수</th>
-            <th scope="col">최고층수</th>
-            <th scope="col">준공예정일</th>
-            <th scope="col">인입광</th>
-            <th scope="col">유휴광</th>
+            <th scope="col">건물 유형</th>
+            <th scope="col">연면적</th>
+            <th scope="col">최고 층 수</th>
+            <th scope="col">최저 층 수</th>
+            <th scope="col">지역</th>
+            <th scope="col">세대 수</th>
+            <th scope="col">주소</th>
+            <th scope="col">총 서비스 용량</th>
         </tr>
         </thead>
         <tbody id="body">
         <tr>
             <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td>오피스텔</td>
+            <td>2,456</td>
+            <td>10</td>
+            <td>3</td>
+            <td>도심</td>
+            <td>20</td>
+            <td>백현동</td>
+            <td>12</td>
         </tr>
         <tr>
             <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
+            <td>상가</td>
+            <td>2,456</td>
+            <td>10</td>
+            <td>3</td>
+            <td>도심</td>
+            <td>20</td>
+            <td>백현동</td>
+            <td>12</td>
         </tr>
         <tr>
             <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
+            <td>주상복합</td>
+            <td>2,456</td>
+            <td>10</td>
+            <td>3</td>
+            <td>도심</td>
+            <td>20</td>
+            <td>백현동</td>
+            <td>12</td>
         </tr>
         </tbody>
     </table>
@@ -380,126 +399,118 @@
 <!--        </tbody>-->
 <!--    </table>-->
 <br>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                            결과
-                </div>
-                <div class="panel-body">
-
-
-                <div class="row">
-                <div class="col-sm-6">
-
-                <div class="card text-white bg-dark text-center">
-                <div class="card-body card-title">
-                    <!--                        <h1 class="m-b-2"><i class="fa fa-facebook display-2"></i></h1>-->
-                    <h4 class="text-light">서비스 용량</h4>
-                    <h2 class="text-light">result</h2>
-                </div>
-                </div>
-                </div>
-        <div class="col-sm-6">
-            <div class="card text-white bg-dark text-center">
-                <div class="card-body card-title">
-                    <!--                        <h1 class="m-b-2"><i class="fa fa-facebook display-2"></i></h1>-->
-                    <h4 class="text-light">투자 비용</h4>
-                    <h2 class="text-light">
-                            <span class="quiz-text">
-                                result
-                            </span>
-                    </h2>
-                </div>
-            </div>
-        </div>
-    </div>
-                    <br>
-    <div>
-        <button id="jsBtn" type="button" class="btn btn-info" onclick="changeByJS()">산출</button>
-        <button class="btn btn-info"><a href="../../../test.html" style="color: #ffffff;">Test for..</a></button>
-        <button class="btn btn-info"><a href="https://now.kt.co.kr/dsn/map" onclick="window.open(this.href); return false" style="color: #ffffff;">Link to..</a>
-        </button>
-
-        <br>
-        <br>
-
-        <a href="https://now.kt.co.kr/sdn/map#Link" title="Link"
-           onclick="fnPopupPage('sdnOpticCoreSelMng', '광코어 선정', '550', '570');">광코어 선정</a>
-    </div>
-                             </div>
-    <!--바디 마지막-->
-
-
-</div>
-<!--    <button class="btn btn-outline-success my-2 my-sm-0" onclick="btn_click();">test</button>-->
-
-<div class="page-content page-container" id="page-content">
-        <div class="padding">
             <div class="row">
-                <div class="container-fluid d-flex justify-content-left">
-                    <div class="col-sm-6 col-md-6">
-                        <div class="card">
-                            <div class="card-header">Radar chart</div>
-                            <div class="card-body" style="height: 400px">
-                                <div class="chartjs-size-monitor"
-                                     style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
-                                    <div class="chartjs-size-monitor-expand"
-                                         style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                                        <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
-                                    </div>
-                                    <div class="chartjs-size-monitor-shrink"
-                                         style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                                        <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
-                                    </div>
-                                </div>
-                                <canvas id="chart-line" width="299px" height="220px" class="chartjs-render-monitor"
-                                        style="display: block; width: 299px; height: 200px;"></canvas>
-                            </div>
-
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            서비스 용량
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6">
-                        <div class="card">
-                            <div class="card-header">Scatter chart</div>
-                            <div class="card-body" style="height: 400px">
-                                <div id="chartContainer" style="height: 400px; width: 100%;"></div>
-                            </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body text-center">
+                            <!-- Tab panes -->
+                                    <h3 class="text-light">총 코어 수 (초고속/무선/전용/광전화)</h3>
+                                    <h3 class="text-light">
+                                        <span class="quiz-text">
+                                            : 산출 결과
+                                        </span>
+                                        <span class="quiz-text2">
+                                            　
+                                        </span>
+                                    </h3>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-            <!-- /.row -->
-<!--            <div class="row">-->
-<!--                <div class="col-lg-8">-->
-
-<!--                    &lt;!&ndash; /.panel &ndash;&gt;-->
-
-<!--                                &lt;!&ndash; /.col-lg-4 (nested) &ndash;&gt;-->
-
-<!--                                &lt;!&ndash; /.col-lg-8 (nested) &ndash;&gt;-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash; /.row &ndash;&gt;-->
-<!--                        </div>-->
                         <!-- /.panel-body -->
                     </div>
                     <!-- /.panel -->
-                <!-- /.col-lg-8 -->
-                    <!-- /.panel -->
-                    <!-- /.panel -->
-
-                    <!-- /.panel .chat-panel -->
                 </div>
-                <!-- /.col-lg-4 -->
+
+
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            투자비 산출
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body text-center" style="padding: 20px;">
+<!--                                    <h4>Home Tab</h4>-->
+                                    <p>
+                                        <h3>ATACAMA Link</h3>
+                                        <button class="btn btn-info" style="margin: -4px">
+                                            <a href="https://now.kt.co.kr/dsn/map" onclick="window.open(this.href); return false" style="color: #ffffff;">Link to ATACAMA</a>
+                                        </button>
+                                    </p>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+
             </div>
-            <!-- /.row -->
+
+
+
+<!--            <div class="panel panel-default">-->
+<!--                <div class="panel-heading">-->
+<!--                    결과-->
+<!--                </div>-->
+<!--                <div class="panel-body">-->
+
+
+<!--                <div class="row">-->
+<!--                <div class="col-sm-6">-->
+
+<!--                <div class="card text-white bg-dark">-->
+<!--                <div class="card-body card-title">-->
+<!--                    &lt;!&ndash;                        <h1 class="m-b-2"><i class="fa fa-facebook display-2"></i></h1>&ndash;&gt;-->
+<!--                    <h4 class="text-light">서비스 용량</h4>-->
+<!--                    <h2 class="text-light">-->
+<!--                        <span class="quiz-text">-->
+<!--                                result-->
+<!--                        </span>-->
+<!--                    </h2>-->
+<!--                </div>-->
+<!--                </div>-->
+<!--                </div>-->
+<!--        <div class="col-sm-6">-->
+<!--            <div class="card text-white bg-dark text-center">-->
+<!--                <div class="card-body card-title">-->
+<!--                    &lt;!&ndash;                        <h1 class="m-b-2"><i class="fa fa-facebook display-2"></i></h1>&ndash;&gt;-->
+<!--                    <h4 class="text-light">투자비 산출</h4>-->
+<!--                    <button class="btn btn-info" style="margin: 10px">-->
+<!--                    <a href="https://now.kt.co.kr/dsn/map" onclick="window.open(this.href); return false" style="color: #ffffff;">Link to ATACAMA</a>-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--                    <br>-->
+<!--    <div>-->
+<!--        <button id="jsBtn" type="button" class="btn btn-info" onclick="changeByJS()">산출</button>-->
+<!--        <button class="btn btn-info"><a href="../../../test.html" style="color: #ffffff;">Test for..</a></button>-->
+
+<!--        <br>-->
+<!--        <br>-->
+
+<!--        <a href="https://now.kt.co.kr/sdn/map#Link" title="Link"-->
+<!--           onclick="fnPopupPage('sdnOpticCoreSelMng', '광코어 선정', '550', '570');">광코어 선정</a>-->
+<!--    </div>-->
+<!--                </div>-->
+<!--    &lt;!&ndash;바디 마지막&ndash;&gt;-->
+
+
+<!--</div>-->
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
         </div>
-        <!-- /#page-wrapper -->
 
     </div>
-    <!-- /#wrapper -->
 
     <!-- jQuery -->
     <script src="../vendor/jquery/jquery.min.js"></script>
@@ -619,8 +630,14 @@
 <script type="text/javascript">
         function changeByJS() {
             let x = document.getElementsByClassName("quiz-text")[0];
-            x.innerText="RESULT";
+            x.innerText="34코어";
             x.style.color="red";
+    }
+
+        function changeByJS22() {
+            let x = document.getElementsByClassName("quiz-text2")[0];
+            x.innerText="(12/7/5/10)";
+            x.style.color="black";
     }
 
 
