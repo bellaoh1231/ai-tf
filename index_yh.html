@@ -51,23 +51,22 @@
 <body>
 
     <div id="wrapper">
-
         <!-- Navigation, margin-top 이용해서 navbar 위 아래 넓이 맞추기 -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-top: 35px">
+                <span>
+                    <div style="position:absolute; top:-15px; left:30px;">
+                    <img src="../static/img/ktci2.png" alt="My Image" width=auto; height="50">
+                    </div>
+                </span>
             <div class="navbar-header">
+
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <span class="">
-                    <img src="../static/img/ktci.png" style="width:10px; height:10px; padding: 0px 40px;">
-
-                </span>
-                <span>
-                    <a class="navbar-brand dohyeon" href="http://127.0.0.1:5000/" style="font-size: 25px;">AI P-TF 1조</a>
-                </span>
+                <a class="navbar-brand dohyeon" href="http://127.0.0.1:5000/" style="font-size: 25px; padding: 0px 40px;">　　　AI P-TF 1조</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -84,7 +83,7 @@
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li>#</i> Logout</a>
+                        <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -96,18 +95,14 @@
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-
                         <li>
-                            <a href="http://127.0.0.1:5000/"><i class="fa fa-lightbulb-o fa-fw"></i> 설계</a>
-                        </li>
-<!--                        <li>-->
-<!--                            <a href="index2.html"><i class="glyphicon glyphicon-search"></i> &nbsp;설계 상세</a>-->
-<!--                        </li>-->
-                        <li>
-                            <a><i class="glyphicon glyphicon-search"></i> &nbsp;설계 상세</a>
+                            <a href="http://127.0.0.1:5000/" style="font-size: 15px; color: #5a5a5a;"><i class="fa fa-lightbulb-o fa-fw"></i>&nbsp;설계</a>
                         </li>
                         <li>
-                            <a href="index4.html"><i class="glyphicon glyphicon-list-alt"></i> &nbsp;시설 현황</a>
+                            <a style="font-size: 15px; color: #5a5a5a;"><i class="glyphicon glyphicon-search"></i> &nbsp;설계 상세</a>
+                        </li>
+                        <li>
+                            <a href="index4.html" style="font-size: 15px; color: #5a5a5a;"><i class="glyphicon glyphicon-list-alt"></i> &nbsp;시설 현황</a>
                         </li>
                     </ul>
                 </div>
@@ -197,10 +192,10 @@
                     <p style="margin-top:5px;">
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-12">
-                            <button type="button" class="btn btn-info" onclick="btn_click2()" style="padding: 8px 15px;">산출
+                            <button type="button" class="btn btn-info" onclick="btn_click2();changeByJS();changeByJS22();" style="padding: 6px 15px; background-color: #593cc1; border-color: #593cc1;">산출
 <!--                                                            <button type="button" class="btn btn-info" onclick="btn_click2();btn_click3();changeByJS();changeByJS22();" style="padding: 8px 15px;">산출-->
                             </button>
-                            <button type="reset" class="btn btn-info">Reset
+                            <button type="reset" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1;">Reset
                             </button>
 <!--                            <button type="button" class="btn btn-danger wrn-btn" onclick="btn_click2();">Excel-->
 <!--                            </button>-->
@@ -218,7 +213,7 @@
 
                 <p>
         <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
-                aria-expanded="true" aria-controls="collapseExample">
+                aria-expanded="true" aria-controls="collapseExample" style="color: #593cc1; background-color: #ffffff; border-color: #593cc1;">
             더보기
         </button>
                 </p>
@@ -251,13 +246,13 @@
                 <div class="col-lg-6">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            서비스 용량
+                            결과
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body text-center">
 
 
-                                    <h3 class="text-light">총 코어 수 (초고속/무선/전용/광전화)</h3>
+                                    <h3 class="text-light">BM별 서비스 용량</h3>
                                     <h3 class="text-light">
                                         <span class="quiz-text">
                                             : 산출 결과
@@ -283,7 +278,7 @@
 <!--                                    <h4>Home Tab</h4>-->
                                     <p>
                                         <h3>ATACAMA Link</h3>
-                                        <button class="btn btn-info" style="margin: -4px">
+                                        <button class="btn btn-info" style="margin: -4px; background-color: #593cc1; border-color: #593cc1;">
                                             <a href="https://now.kt.co.kr/dsn/map" onclick="window.open(this.href); return false" style="color: #ffffff;">Link to ATACAMA</a>
                                         </button>
                                     </p>
@@ -449,7 +444,7 @@
                                         labels: ["초고속", "전송", "광전화", "무선"],
                                         datasets: [{
                                             data: result[1],
-                                            backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745'],
+                                            backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
                                         }],
                                     },
                                 });
@@ -460,69 +455,7 @@
 
     </script>
 
-<script type="text/javascript">
-            var result;
-            function btn_click3() {
-            console.log("1차 통과")
-            var param1 = document.getElemenatById('param1').value
-            var param2 = document.getElementById('param2').value
-            var param3 = document.getElementById('param3').value
-            var param4 = document.getElementById('pram4').value
-            var param5 = document.getElementById('param5').value
-            var param6 = document.getElementById('param6').value
-            $.ajax({
-                            type : 'POST',
-                            url : 'http://127.0.0.1:5000/test2',
-                            data : {
-                                    itemid1:param1,
-                                    itemid2:param2,
-                                    itemid3:param3,
-                                    itemid4:param4,
-                                    itemid5:param5,
-                                    itemid6:param6
-                            },
-                            dataType : 'JSON',
-                            success : function(result)
-                                {
-                                var locations = result
-                                var locations2 =[
-                                                ['Ag2222e', 'Weight'],
-                                                [4, 5],
-                                                [3, 3.5],
-                                                [6.5, 7]];
-                                console.log(locations2[0])
 
-                                 google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-<!-- var data = google.visualization.arrayToDataTable([{'Age': 'Weight'}, result]);-->
-        console.log(result)
-        var data = google.visualization.arrayToDataTable(locations2);
-
-
-
-          console.log("아하?")
-        var options = {
-<!--          title: 'Age vs. Weight comparison',-->
-          hAxis: {minValue: 0, maxValue: 20},
-          vAxis: {title: 'Weight', minValue: 0, maxValue: 20},
-          legend: 'none'
-        };
-
-        var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
-
-        chart.draw(data, options);
-      }
-                                }
-                    });
-
-
-
-
-    }
-
-</script>
 <script type="text/javascript">
         function changeByJS() {
             let x = document.getElementsByClassName("quiz-text")[0];
