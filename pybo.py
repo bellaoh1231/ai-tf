@@ -40,7 +40,7 @@ def languages():
     conn = sqlite3.connect("trest.db")
     curs = conn.cursor()
     curs.execute('SELECT * FROM sampledb where 1=1 and (?="" OR 세대수=?) and (?="선택하세요" OR 지역=?) and (?="선택하세요" OR 건물유형=?)',
-                 (value6, value6, value4, value4, value5, value5))  # test1에 있는 값을 조건 없이 불러옴 or조건으로 입력값이 있는 것만 조회함
+                 (value6, value6, value4, value4, value5, value5))
 
     # row_headers = [x[0] for x in curs.description]
     rows = curs.fetchall()
@@ -71,8 +71,8 @@ def languages2():
 
     conn = sqlite3.connect("trest.db")
     curs = conn.cursor()
-    curs.execute('SELECT 연면적 FROM sampledb where 1=1 and (?="" OR 세대수=?) and (?="선택하세요" OR 지역=?) and (?="선택하세요" OR 건물유형=?)',
-                 (value6, value6, value4, value4, value5, value5))  # test1에 있는 값을 조건 없이 불러옴 or조건으로 입력값이 있는 것만 조회함
+    curs.execute('SELECT * FROM sampledb where 1=1 and (?="" OR 세대수=?) and (?="선택하세요" OR 지역=?) and (?="선택하세요" OR 건물유형=?)',
+                 (value6, value6, value4, value4, value5, value5))
 
     # row_headers = [x[0] for x in curs.description]
     rows = curs.fetchall()
