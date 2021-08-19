@@ -113,13 +113,13 @@
         <div id="page-wrapper" style="margin: -20px 0 0 250px;">
             <div class="row">
                 <div class="col-lg-12">
-                    <h3 class="page-header dohyeon" style="margin: 20px 0 20px;">시설 현황</h3>
+                    <h3 class="page-header dohyeon" style="margin: 20px 0 20px;">전체 시설 분포</h3>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
 
-            <!-- ★★변경★★ -->
+
             <div class="row">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -151,12 +151,12 @@
                         </div>
                     </div>>
             </div>
-            <!-- ★★변경 끝★★ -->
+
 
             <div class="row">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                            주소 검색 (지번)
+                            내용 미정
                     </div>
                     <div class="panel-body">
                         <section class="search-sec">
@@ -199,7 +199,6 @@
                                                     <input type="text" class="form-control search-slt" placeholder="예) 45" id="param1">
                                                 </div>
                                                 <div class="col-lg-2 col-md-2 col-sm-12">
-<!--                                                    <select class="form-control search-slt" id="exampleFormControlSelect1">-->
                                                     <select class="form-control search-slt" id="param2">
                                                         <option>시설 구분</option>
                                                         <option>초고속</option>
@@ -212,84 +211,13 @@
                                             <p style="margin-top:5px;">
                                             <div class="row">
                                                 <div class="col-lg-3 col-md-3 col-sm-12">
-                                                    <button type="button" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1;" onclick="btn_click3()">검색
-                                                    </button>
                                                     <button type="reset" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1;">Reset
                                                     </button>
                                                 </div>
                                             </div>
                                         </div>
-
-                                    <!--★도로명 검색★-->
-<!--                                        <div class="col-lg-12">
-                                            <br>
-                                            <div class="row">
-                                                <div class="col-lg-2 col-md-2 col-sm-12">
-                                                    <label class="text-white" for="inputEmail1">도로명 검색 - 특별시/도</label>
-                                                </div>
-                                                <div class="col-lg-2 col-md-2 col-sm-12">
-                                                    <label class="text-white" for="inputEmail2">시/군/구</label>
-                                                </div>
-                                                <div class="col-lg-2 col-md-2 col-sm-12">
-                                                    <label class="text-white" for="inputEmail3">도로명</label>
-                                                </div>
-                                                <div class="col-lg-2 col-md-2 col-sm-12">
-                                                    <label class="text-white" for="inputEmail3">건물번호</label>
-                                                </div>
-                                                <div class="col-lg-2 col-md-2 col-sm-12">
-                                                    <label class="text-white" for="inputEmail3">BM 구분</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                            <div class="col-lg-2 col-md-2 col-sm-12">
-                                                <select class="form-control search-slt" id="add11">
-                                                    <option>경기도</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-lg-2 col-md-2 col-sm-12">
-                                                <select class="form-control search-slt" id="add22" onchange="add22()">
-                                                </select>
-                                            </div>
-                                            <div class="col-lg-2 col-md-2 col-sm-12">
-                                                <select class="form-control search-slt" id="add33">
-
-                                                </select>
-                                            </div>
-                                            <div class="col-lg-2 col-md-2 col-sm-12">
-                                                <input type="text" class="form-control search-slt" placeholder="예) 45">
-                                            </div>
-
-                                            <div class="col-lg-2 col-md-2 col-sm-12">
-                                                <select class="form-control search-slt" id="exampleFormControlSelect1">
-                                                    <option>시설 구분</option>
-                                                    <option>초고속</option>
-                                                    <option>전송</option>
-                                                    <option>전용</option>
-                                                    <option>기타</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                            <p style="margin-top:5px;">
-                                            <div class="row">
-                                                <div class="col-lg-3 col-md-3 col-sm-12">
-                                                    <button type="button" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1;" onclick="btn_click4()">검색
-                                                    </button>
-                                                    <button type="reset" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1;">Reset
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>-->
-                                        <!--★도로명 검색 끝★-->
-
                                     </div>
 
-                                <br>
-
-                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="true" aria-controls="collapseExample" style="color: #593cc1; background-color: #ffffff; border-color: #593cc1;">
-                                결과 확인
-                                </button>
-                                <!-- <button class="btn btn-primary" type="button" onclick="btn_click2();" style="color: #593cc1; background-color: #ffffff; border-color: #593cc1;">전체 검색</button> -->
 
                                 <div class="collapse" id="collapseExample">
                                     <div class="card card-body">
@@ -315,6 +243,7 @@
                             </div>
 
 
+
     <!-- jQuery -->
     <script src="../static/vendor/jquery/jquery.min.js"></script>
 
@@ -328,10 +257,6 @@
     <script src="../static/vendor/datatables/js/jquery.dataTables.min.js"></script>
     <script src="../static/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
     <script src="../static/vendor/datatables-responsive/dataTables.responsive.js"></script>
-
-<!--    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
-
 
     <!-- Custom Theme JavaScript -->
     <script src="../static/dist/js/sb-admin-2.js"></script>
@@ -350,23 +275,22 @@
 
 
     <script type="text/javascript">
+            var ctx = document.getElementById("myPieChart");
+            var myPieChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                labels: ["초고속", "전송", "광전화", "무선"],
+                datasets: [{
+                  data: [12.21, 15.58, 11.25, 8.32],
+                  backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
+                }],
+              },
 
-         var totaldata = JSON.parse('{{ add2 | tojson | safe}}');
-         locations = totaldata;
-         console.log('totaldata');
-         console.log(totaldata);
-          var row = `<option value="">선택하세요</option>`
-                                        var table = $('#add2')
-                                      table.append(row)
-                                    for (var i in locations){
+            });
+    </script>
 
-                                        console.log(locations[i][0])
-                                      var row = `
-                                                <option value="${locations[i][0]}">${locations[i][0]}</option>`
-                                        var table = $('#add2')
-                                      table.append(row)
-                                    }
 
+    <script type="text/javascript">
 
 
         var list2 = JSON.parse('{{ list_chart2 | tojson | safe}}');
@@ -384,8 +308,6 @@
             });
 
 
-
-
         var list3 = JSON.parse('{{ list_chart3 | tojson | safe}}');
         console.log(list3)
         var ctx = document.getElementById("myPieChart3");
@@ -399,7 +321,6 @@
                 }],
               },
             });
-
 
 
         var list4 = JSON.parse('{{ list_chart4 | tojson | safe}}');
@@ -418,69 +339,23 @@
 
     </script>
 
-
-                           <!--
-
-                           <script type="text/javascript">
-            var ctx = document.getElementById("myPieChart2");
-            var myPieChart = new Chart(ctx, {
-              type: 'pie',
-              data: {
-                labels: ["초고속", "전송", "광전화", "무선"],
-                datasets: [{
-                  data: [12.21, 15.58, 11.25, 8.32],
-                  backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
-                }],
-              },
-            });
-        </script>
-
-
-        <script type="text/javascript">
-            var ctx = document.getElementById("myPieChart3");
-            var myPieChart = new Chart(ctx, {
-              type: 'pie',
-              data: {
-                labels: ["초고속", "전송", "광전화", "무선"],
-                datasets: [{
-                  data: [12.21, 15.58, 11.25, 8.32],
-                  backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
-                }],
-              },
-            });
-        </script>
-
-        <script type="text/javascript">
-            var ctx = document.getElementById("myPieChart4");
-            var myPieChart = new Chart(ctx, {
-              type: 'pie',
-              data: {
-                labels: ["초고속", "전송", "광전화", "무선"],
-                datasets: [{
-                  data: [12.21, 15.58, 11.25, 8.32],
-                  backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
-                }],
-              },
-            });
-        </script> -->
-
-
     <script type="text/javascript">
 
-         var totaldata = JSON.parse('{{ add22 | tojson | safe}}');
+         var totaldata = JSON.parse('{{ add2 | tojson | safe}}');
          locations = totaldata;
+         console.log('totaldata');
+         console.log(totaldata);
           var row = `<option value="">선택하세요</option>`
-                                        var table = $('#add22')
+                                        var table = $('#add2')
                                       table.append(row)
                                     for (var i in locations){
 
-
+                                        console.log(locations[i][0])
                                       var row = `
                                                 <option value="${locations[i][0]}">${locations[i][0]}</option>`
-                                        var table = $('#add22')
+                                        var table = $('#add2')
                                       table.append(row)
                                     }
-
     </script>
 
     <script type="text/javascript">
@@ -514,180 +389,11 @@
     </script>
 
 
-    <script type="text/javascript">
-           function add22() {
-            var x = document.getElementById("add22").value;
-            $('#add33').empty();
-            console.log('test')
-             $.ajax({
-                            type : 'POST',
-                            url : 'http://127.0.0.1:5000/add',
-                            data : {
-                                    x_py: x
-                            },
-                            dataType : 'JSON',
-                            success : function(result){
-            locations = result[0];
-          var row = `<option value="">선택하세요</option>`
-                                        var table = $('#add33')
-                                      table.append(row)
-                                    for (var i in locations){
-
-
-                                      var row = `
-                                                <option value=${locations[i][0]}>${locations[i][0]}</option>`
-                                        var table = $('#add33')
-                                      table.append(row)
-                                    }
-                            }
-            });
-    };
-    </script>
-
-    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
-    <script>
-    $(document).ready(function() {
-        $('#dataTables-example').DataTable({
-            responsive: true
-        });
-    });
-    </script>
-
-
-        <script type="text/javascript">
-            var ctx = document.getElementById("myPieChart");
-            var myPieChart = new Chart(ctx, {
-              type: 'pie',
-              data: {
-                labels: ["초고속", "전송", "광전화", "무선"],
-                datasets: [{
-                  data: [12.21, 15.58, 11.25, 8.32],
-                  backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
-                }],
-              },
-
-            });
-        </script>
-
-
-
-
-
-
-        <script type="text/javascript">
-            var result;
-
-            function btn_click2() {
-            console.log("1차 통과")
-            var param1 = document.getElementById('add1').value
-            var param2 = document.getElementById('add2').value
-            var param3 = document.getElementById('add3').value
-            var param4 = document.getElementById('param1').value
-            var param5 = document.getElementById('param2').value
-<!--            var param6 = document.getElementById('param6').value-->
-
-                                                var t = $('#tableData').DataTable().destroy();
-                                                var t = $('#tableData').DataTable(
-                                                    {
-                                                        columnDefs: [
-                                                            { targets: '_all' }
-                                                        ],
-                                                        lengthChange: false,
-                                                        searching: false,
-                                                        ordering: false,
-                                                        info: false,
-                                                        paging: true
-                                                    }
-                                                );
-                                                t.clear();
-                                                t.draw();
-            console.log("2차 통과")
-            $.ajax({
-                            type : 'POST',
-                            url : 'http://127.0.0.1:5000/test2',
-                            data : {
-                                    itemid1:param1,
-                                    itemid2:param2,
-                                    itemid3:param3,
-                                    itemid4:param4,
-                                    itemid5:param5
-<!--                                    itemid6:param6-->
-                                    },
-                            dataType : 'JSON',
-                            success : function(result)
-                                {
-                                var locations = result
-                                        console.log(locations);
-                                        console.log(locations[0][0]);
-                                        for (var i in locations){
-                                              t.row.add(
-                                                     [locations[i][0], locations[i][1], locations[i][2], locations[i][3],
-                                                      locations[i][4],locations[i][5],locations[i][6],locations[i][7],
-                                                      locations[i][8],locations[i][9]]).draw();
-                                        }
-                                }
-                    });
-            }
-        </script>
-
-        <script type="text/javascript">
-
-            function btn_click3() {
-            console.log("1차 통과")
-            var param1 = document.getElementById('add1').value
-            var param2 = document.getElementById('add2').value
-            var param3 = document.getElementById('add3').value
-            var param4 = document.getElementById('param1').value
-            var param5 = document.getElementById('param2').value
-<!--            var param6 = document.getElementById('param6').value-->
-
-                                                var t = $('#tableData').DataTable().destroy();
-                                                var t = $('#tableData').DataTable(
-                                                    {
-                                                        columnDefs: [
-                                                            { targets: '_all' }
-                                                        ],
-                                                        lengthChange: false,
-                                                        searching: false,
-                                                        ordering: false,
-                                                        info: false,
-                                                        paging: true
-                                                    }
-                                                );
-                                                t.clear();
-                                                t.draw();
-            console.log("2차 통과")
-            console.log(param2);
-            $.ajax({
-                            type : 'POST',
-                            url : 'http://127.0.0.1:5000/test3',
-                            data : {
-                                    itemid1:param1,
-                                    itemid2:param2,
-                                    itemid3:param3,
-                                    itemid4:param4,
-                                    itemid5:param5
-<!--                                    itemid6:param6-->
-                                    },
-                            dataType : 'JSON',
-                            success : function(result)
-                                {
-                                var locations = result
-                                        console.log(locations);
-                                        console.log(locations[0][0]);
-                                        for (var i in locations){
-                                              t.row.add(
-                                                     [locations[i][0], locations[i][1], locations[i][2], locations[i][3],
-                                                      locations[i][4],locations[i][5],locations[i][6],locations[i][7],
-                                                      locations[i][8],locations[i][9]]).draw();
-                                        }
-                                }
-                    });
-            }
-        </script>
-
 
 
 </body>
+
+
+
 
 </html>
