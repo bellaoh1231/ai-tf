@@ -35,6 +35,9 @@
     </style>
     <link href="../static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -95,14 +98,20 @@
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
+
                         <li>
-                            <a href="http://127.0.0.1:5000/" style="font-size: 15px; color: #5a5a5a;"><i class="fa fa-lightbulb-o fa-fw"></i> &nbsp;설계</a>
+                            <a href="http://127.0.0.1:5000/" style="font-size: 16px; color: #5a5a5a;"><i class="bi-lightbulb"></i> &nbsp;설계</a>
                         </li>
                         <li>
-                            <a href="index3.html" style="font-size: 15px; color: #5a5a5a;"><i class="glyphicon glyphicon-list-alt"></i> &nbsp;전체 시설 분포 현황</a>
-                        </li>
-                        <li>
-                            <a href="index4.html" style="font-size: 15px; color: #5a5a5a;"><i class="glyphicon glyphicon-search"></i> &nbsp;시설 현황</a>
+                            <a href="#" style="font-size: 16px; color: #5a5a5a;"><i class="bi-card-list"></i> &nbsp;기축 시설 현황</a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                <a href="index3.html" style="font-size: 15px; color: #5a5a5a;"><i class="glyphicon glyphicon-list-alt"></i> &nbsp;전체</a>
+                                </li>
+                                <li>
+                                <a href="index4.html" style="font-size: 15px; color: #5a5a5a;"><i class="glyphicon glyphicon-search"></i> &nbsp;조회</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -115,7 +124,7 @@
             <div class="row">
 
                 <div class="col-lg-12">
-                    <h3 class="page-header dohyeon" style="margin: 20px 0 20px;">설계 Page</h3>
+                    <h3 class="page-header dohyeon" style="margin: 20px 0 20px;">인입광 코어 설계</h3>
                 </div>
 
             </div>
@@ -134,7 +143,7 @@
                 <div class="col-lg-12">
                     <div class="row">
                         <div class="col-lg-2 col-md-2 col-sm-12">
-                            <label class="text-white" for="inputEmail1">연면적</label>
+                            <label class="text-white" for="inputEmail1">연면적(㎡)</label>
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-12">
                             <label class="text-white" for="inputEmail2">최고 층 수</label>
@@ -211,12 +220,10 @@
                     </div>
             </div>
 
-                <p>
-        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
-                aria-expanded="true" aria-controls="collapseExample" style="color: #593cc1; background-color: #ffffff; border-color: #593cc1;">
-            더보기
-        </button>
-                </p>
+<!--                <p>-->
+<!--        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"-->
+<!--                aria-expanded="true" aria-controls="collapseExample" style="color: #593cc1; background-color: #ffffff; border-color: #593cc1;">더보기</button>-->
+<!--                </p>-->
     <div class="collapse" id="collapseExample">
         <div class="card card-body">
 
@@ -315,20 +322,20 @@
                 </div>
 
 
-                <div class="col-lg-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Scatter Chart
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body text-center">
-                            <!-- Tab panes -->
-                            <div id="chartContainer" style="height: 370px; width: 100%;"></div>
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
+<!--                <div class="col-lg-6">-->
+<!--                    <div class="panel panel-default">-->
+<!--                        <div class="panel-heading">-->
+<!--                            Scatter Chart-->
+<!--                        </div>-->
+<!--                        &lt;!&ndash; /.panel-heading &ndash;&gt;-->
+<!--                        <div class="panel-body text-center">-->
+<!--                            &lt;!&ndash; Tab panes &ndash;&gt;-->
+<!--                            <div id="chartContainer" style="height: 370px; width: 100%;"></div>-->
+<!--                        </div>-->
+<!--                        &lt;!&ndash; /.panel-body &ndash;&gt;-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; /.panel &ndash;&gt;-->
+<!--                </div>-->
 
             </div>
 
@@ -458,14 +465,14 @@
 <script type="text/javascript">
         function changeByJS() {
             let x = document.getElementsByClassName("quiz-text")[0];
-            x.innerText="34코어";
+            x.innerText="7코어";
             x.style.color="red";
     }
 </script>
 <script type="text/javascript">
         function changeByJS22() {
             let x = document.getElementsByClassName("quiz-text2")[0];
-            x.innerText="(12/7/5/10)";
+            x.innerText="(초고속 3 / 전송 2 / 전용 1 / 무선 1)";
             x.style.color="black";
     }
 
