@@ -69,7 +69,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand dohyeon" href="http://127.0.0.1:5000/" style="font-size: 25px; padding: 0px 40px;">　　　1조</a>
+                <a class="navbar-brand dohyeon" href="http://127.0.0.1:5000/" style="font-size: 25px; padding: 0px 40px;">　　　</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -100,16 +100,16 @@
                     <ul class="nav" id="side-menu">
 
                         <li>
-                            <a href="http://127.0.0.1:5000/" style="font-size: 16px; color: #5a5a5a;"><i class="bi-lightbulb"></i> &nbsp;설계</a>
+                            <a href="http://127.0.0.1:5000/" style="font-size: 16px; color: #5a5a5a;"><i class="bi-lightbulb"></i> &nbsp;신축 건물 설계</a>
                         </li>
                         <li>
-                            <a href="#" style="font-size: 16px; color: #5a5a5a;"><i class="bi-card-list"></i> &nbsp;기축 시설 현황</a>
+                            <a href="#" style="font-size: 16px; color: #5a5a5a;"><i class="bi-card-list"></i> &nbsp;상세 정보</a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                <a href="index3.html" style="font-size: 15px; color: #5a5a5a;"><i class="glyphicon glyphicon-list-alt"></i> &nbsp;전체</a>
+                                <a href="index3.html" style="font-size: 15px; color: #5a5a5a;"><i class="glyphicon glyphicon-list-alt"></i> &nbsp;전체 시설 현황</a>
                                 </li>
                                 <li>
-                                <a href="index4.html" style="font-size: 15px; color: #5a5a5a;"><i class="glyphicon glyphicon-search"></i> &nbsp;조회</a>
+                                <a href="index4.html" style="font-size: 15px; color: #5a5a5a;"><i class="glyphicon glyphicon-search"></i> &nbsp;기축 건물 조회</a>
                                 </li>
                             </ul>
                         </li>
@@ -121,13 +121,16 @@
         </nav>
 
         <div id="page-wrapper" style="margin: -20px 0 0 250px;">
-            <div class="row">
+            <br>
+
+
+<!--            <div class="row">
 
                 <div class="col-lg-12">
                     <h3 class="page-header dohyeon" style="margin: 20px 0 20px;">인입광 코어 설계</h3>
                 </div>
 
-            </div>
+            </div>-->
             <!-- 내용 -->
             <div class="row">
                    <div class="panel panel-default">
@@ -248,14 +251,15 @@
         </div>
     </div>
 
+
 <br>
+
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             결과
                         </div>
-                        <!-- /.panel-heading -->
                         <div class="panel-body text-center">
 
 
@@ -273,16 +277,24 @@
                     </div>
                     <!-- /.panel -->
                 </div>
-
-
-                <div class="col-lg-6">
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">BM 분포</div>
+                        <div class="panel-body">
+                            <canvas id="myPieChart"></canvas>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-4">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            투자비 산출
+                            Go To ATACAMA
                         </div>
-                        <!-- /.panel-heading -->
                         <div class="panel-body text-center" style="padding: 20px;">
-<!--                                    <h4>Home Tab</h4>-->
                                     <p>
                                         <h3>ATACAMA Link</h3>
                                         <button class="btn btn-info" style="margin: -4px; background-color: #593cc1; border-color: #593cc1;">
@@ -294,54 +306,10 @@
                     </div>
                     <!-- /.panel -->
                 </div>
-
+                <!-- /.col-lg-4 -->
             </div>
 
 
-
-
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Pie Chart
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-3"></div>
-                            <div class="panel-body text-center col-lg-6">
-                            <!--Pie Chart-->
-                                <div class="card-body" style="height:20vh; width:20vw">
-                                        <canvas id="myPieChart"></canvas>
-                                </div>
-                            </div>
-                            <div class="col-lg-3"></div>
-                        <!-- /.panel-body -->
-                        </div>
-                    </div>
-                    <!-- /.panel -->
-                </div>
-
-
-<!--                <div class="col-lg-6">-->
-<!--                    <div class="panel panel-default">-->
-<!--                        <div class="panel-heading">-->
-<!--                            Scatter Chart-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; /.panel-heading &ndash;&gt;-->
-<!--                        <div class="panel-body text-center">-->
-<!--                            &lt;!&ndash; Tab panes &ndash;&gt;-->
-<!--                            <div id="chartContainer" style="height: 370px; width: 100%;"></div>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; /.panel-body &ndash;&gt;-->
-<!--                    </div>-->
-<!--                    &lt;!&ndash; /.panel &ndash;&gt;-->
-<!--                </div>-->
-
-            </div>
-
-
-
-<!--            <div id="chart_div" style="width: 900px; height: 500px;">차트 위치~</div>-->
 
 
 

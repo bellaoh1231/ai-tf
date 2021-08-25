@@ -65,7 +65,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand dohyeon" href="http://127.0.0.1:5000/" style="font-size: 25px; padding: 0px 40px;">　　　1조</a>
+                <a class="navbar-brand dohyeon" href="http://127.0.0.1:5000/" style="font-size: 25px; padding: 0px 40px;">　　　</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -95,16 +95,16 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                          <li>
-                             <a href="http://127.0.0.1:5000/" style="font-size: 16px; color: #5a5a5a;"><i class="bi-lightbulb"></i> &nbsp;설계</a>
+                             <a href="http://127.0.0.1:5000/" style="font-size: 16px; color: #5a5a5a;"><i class="bi-lightbulb"></i> &nbsp;신축 건물 설계</a>
                          </li>
                             <li>
-                                <a href="#" style="font-size: 16px; color: #5a5a5a;"><i class="bi-card-list"></i> &nbsp;기축 시설 현황</a>
+                                <a href="#" style="font-size: 16px; color: #5a5a5a;"><i class="bi-card-list"></i> &nbsp;상세 정보</a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                <a href="index3.html" style="font-size: 15px; color: #5a5a5a;"><i class="glyphicon glyphicon-list-alt"></i> &nbsp;전체</a>
+                                <a href="index3.html" style="font-size: 15px; color: #5a5a5a;"><i class="glyphicon glyphicon-list-alt"></i> &nbsp;전체 시설 현황</a>
                                 </li>
                                 <li>
-                                <a href="index4.html" style="font-size: 15px; color: #5a5a5a;"><i class="glyphicon glyphicon-search"></i> &nbsp;조회</a>
+                                <a href="index4.html" style="font-size: 15px; color: #5a5a5a;"><i class="glyphicon glyphicon-search"></i> &nbsp;기축 건물 조회</a>
                                 </li>
                             </ul>
                             </li>
@@ -116,52 +116,19 @@
         </nav>
 
         <div id="page-wrapper" style="margin: -20px 0 0 250px;">
-            <div class="row">
+            <br>
+
+<!--            <div class="row">
                 <div class="col-lg-12">
-                    <h3 class="page-header dohyeon" style="margin: 20px 0 20px;">전체 시설 분포</h3>
+                    <h3 class="page-header dohyeon" style="margin: 20px 0 20px;">전체 시설 현황</h3>
                 </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-
-
-            <div class="row">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            지역별 시설 분포
-                        </div>
-                        <div class="panel-body">
-                            <div class="card-body row">
-                                    <div class="col-lg-3">
-                                        <canvas id="myPieChart"></canvas>
-                                        <br>
-                                        <p style="text-align:center;">광주시 오포읍 신현리</p>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <canvas id="myPieChart2"></canvas>
-                                        <br>
-                                        <p style="text-align:center;">성남시 분당구 백현동</p>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <canvas id="myPieChart3"></canvas>
-                                        <br>
-                                        <p style="text-align:center;">성남시 분당구 판교동</p>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <canvas id="myPieChart4"></canvas>
-                                        <br>
-                                        <p style="text-align:center;">성남시 분당구 삼평동</p>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-
+                &lt;!&ndash; /.col-lg-12 &ndash;&gt;
+            </div>-->
 
             <div class="row">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                            내용 미정
+                            소속 기관 선택
                     </div>
                     <div class="panel-body">
                         <section class="search-sec">
@@ -170,25 +137,22 @@
                                         <div class="col-lg-12">
                                             <div class="row">
                                                 <div class="col-lg-2 col-md-2 col-sm-12">
-                                                    <label class="text-white" for="inputEmail1">특별시/도</label>
+                                                    <label class="text-white" for="inputEmail1">본부</label>
                                                 </div>
                                                 <div class="col-lg-2 col-md-2 col-sm-12">
-                                                    <label class="text-white" for="inputEmail2">시/군/구</label>
+                                                    <label class="text-white" for="inputEmail2">지사</label>
                                                 </div>
                                                 <div class="col-lg-2 col-md-2 col-sm-12">
-                                                    <label class="text-white" for="inputEmail3">읍/면/동</label>
+                                                    <label class="text-white" for="inputEmail3">지점</label>
                                                 </div>
                                                 <div class="col-lg-2 col-md-2 col-sm-12">
-                                                    <label class="text-white" for="inputEmail3">번지</label>
-                                                </div>
-                                                <div class="col-lg-2 col-md-2 col-sm-12">
-                                                    <label class="text-white" for="inputEmail3">BM 구분</label>
+                                                    <label class="text-white" for="inputEmail3">국사</label>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-lg-2 col-md-2 col-sm-12">
                                                     <select class="form-control search-slt" id="add1">
-                                                        <option>경기도</option>
+                                                        <option>강남/서부</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-lg-2 col-md-2 col-sm-12">
@@ -199,9 +163,6 @@
                                                     <select class="form-control search-slt" id="add3">
                                                         <option>선택하세요</option>
                                                     </select>
-                                                </div>
-                                                <div class="col-lg-2 col-md-2 col-sm-12">
-                                                    <input type="text" class="form-control search-slt" placeholder="예) 45" id="param1">
                                                 </div>
                                                 <div class="col-lg-2 col-md-2 col-sm-12">
                                                     <select class="form-control search-slt" id="param2">
@@ -246,6 +207,48 @@
                                     </div>
                                 </div>
                             </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="row">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            지역별 시설 분포
+                        </div>
+                        <div class="panel-body">
+                            <div class="card-body row">
+                                    <div class="col-lg-3">
+                                        <canvas id="myPieChart"></canvas>
+                                        <br>
+                                        <p style="text-align:center;">총괄 현황</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <canvas id="myPieChart2"></canvas>
+                                        <br>
+                                        <p style="text-align:center;">초고속 인입 현황</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <canvas id="myPieChart3"></canvas>
+                                        <br>
+                                        <p style="text-align:center;">무선 인입 현황</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <canvas id="myPieChart4"></canvas>
+                                        <br>
+                                        <p style="text-align:center;">전용 인입 현황</p>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+
+
 
 
 
@@ -284,7 +287,7 @@
             var myPieChart = new Chart(ctx, {
               type: 'pie',
               data: {
-                labels: ["초고속", "전송", "광전화", "무선"],
+                labels: ["신현", "백현", "판교", "삼평"],
                 datasets: [{
                   data: [12.21, 15.58, 11.25, 8.32],
                   backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
@@ -344,6 +347,7 @@
 
     </script>
 
+
     <script type="text/javascript">
 
          var totaldata = JSON.parse('{{ add2 | tojson | safe}}');
@@ -362,6 +366,8 @@
                                       table.append(row)
                                     }
     </script>
+
+
 
     <script type="text/javascript">
            function add2() {
@@ -392,7 +398,6 @@
             });
     };
     </script>
-
 
 
 
