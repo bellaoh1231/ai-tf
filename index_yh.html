@@ -191,7 +191,7 @@
                             </select>
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-12">
-                            <select class="form-control search-slt" id="param5">
+                            <select class="form-control search-slt" id="param5" onchange="bb()">
                                 <option>선택하세요</option>
                                 <option>주상복합</option>
                                 <option>빌딩</option>
@@ -580,20 +580,35 @@ window.onload = function()
 }
 </script> -->
 
-<script>
 
-    var selectOption = document.getElementById('param5');
-    selectOption = selectOption.options[selectOption.selectedIndex].value;
-
-    console.log(selectOption)
-
-    if (selectOption == '빌딩')
-        {
-            document.getElementById('param6').style.display = 'none';
-        }
+<script type="text/javascript">
+           function bb() {
 
 
-</script>
+           var selectOption = document.getElementById('param5');
+           selectOption = selectOption.options[selectOption.selectedIndex].value;
+
+            console.log(selectOption)
+
+            if ( selectOption == '빌딩' ) {
+                                  document.getElementById('param6').disabled = 'True';
+                                }
+                                else if ( selectOption == '상가' ) {
+                                    document.getElementById('param6').disabled = 'True';
+                                }
+                                else if ( selectOption == '주상복합' ) {
+                                    document.getElementById('param6').disabled = 'False';
+                                }
+                                else {
+                                  document.getElementById('param6').disabled = 'False';
+                                }
+
+
+            };
+
+
+
+    </script>
 
 
 
