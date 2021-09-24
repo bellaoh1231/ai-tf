@@ -31,8 +31,13 @@
     <link href="../static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <style type="text/css">
-        .dohyeon { font-family: 'Noto Sans KR', sans-serif; }
+        .dohyeon {font-family: 'Noto Sans KR', sans-serif;}
+        .jua {font-family: 'Jua', sans-serif;}
+        .test1 {font-size:30px; display:none;}
     </style>
 
 
@@ -66,7 +71,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand dohyeon" href="http://127.0.0.1:5000/" style="font-size: 25px; padding: 0px 40px;">　　　1조</a>
+                <a class="navbar-brand dohyeon" href="http://127.0.0.1:5000/" style="font-size: 25px; padding: 0px 40px;">　　　</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -96,16 +101,15 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                          <li>
-                             <a href="http://127.0.0.1:5000/" style="font-size: 16px; color: #5a5a5a;"><i class="bi-lightbulb"></i> &nbsp;설계</a>
-                         </li>
+                             <a href="http://127.0.0.1:5000/" style="font-size: 17px; color: #5a5a5a;"><i class="bi-lightbulb"></i> &nbsp;&nbsp;신축 건물 설계</a>
                         <li>
-                            <a href="#" style="font-size: 16px; color: #5a5a5a;"><i class="bi-card-list"></i> &nbsp;기축 시설 현황</a>
+                            <a href="#" style="font-size: 17px; color: #5a5a5a;"><i class="bi-card-list"></i> &nbsp;상세 정보</a>
                             <ul class="nav nav-second-level">
+<!--                                <li>-->
+<!--                                <a href="index3.html" style="font-size: 15px; color: #5a5a5a;"><i class="glyphicon glyphicon-list-alt"></i> &nbsp;전체 시설 현황</a>-->
+<!--                                </li>-->
                                 <li>
-                                <a href="index3.html" style="font-size: 15px; color: #5a5a5a;"><i class="glyphicon glyphicon-list-alt"></i> &nbsp;전체</a>
-                                </li>
-                                <li>
-                                <a href="index4.html" style="font-size: 15px; color: #5a5a5a;"><i class="glyphicon glyphicon-search"></i> &nbsp;조회</a>
+                                <a href="index4.html" style="font-size: 17px; color: #5a5a5a;"><i class="glyphicon glyphicon-search"></i> &nbsp;&nbsp;기축 건물 현황</a>
                                 </li>
                             </ul>
                         </li>
@@ -119,47 +123,138 @@
         <div id="page-wrapper" style="margin: -20px 0 0 250px;">
             <div class="row">
                 <div class="col-lg-12">
-                    <h3 class="page-header dohyeon" style="margin: 20px 0 20px;">시설 현황</h3>
+                    <br>
+<!--                    <h3 class="page-header dohyeon" style="margin: 20px 0 20px;">시설 현황</h3>-->
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-            <!-- /.row -->
 
-            <!-- ★★변경★★ -->
+
             <div class="row">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            지역별 시설 분포
-                        </div>
-                        <div class="panel-body">
-                            <div class="card-body row">
-                                    <div class="col-lg-3">
-                                        <canvas id="myPieChart"></canvas>
-                                        <br>
-                                        <p style="text-align:center;">광주시 오포읍 신현리</p>
+                <div class="panel panel-default">
+                    <!--<div class="panel-heading">                         　
+                    </div> -->
+                    <br>
+                    <div class="panel-body">
+                        <section class="search-sec">
+                            <div action="#" method="post" novalidate="novalidate">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <label class="text-white" for="inputEmail1" style="font-size:17px">본부</label>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <label class="text-white" for="inputEmail2" style="font-size:17px">지사</label>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <label class="text-white" for="inputEmail3" style="font-size:17px">지점</label>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <label class="text-white" for="inputEmail3" style="font-size:17px">국사</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <select class="form-control search-slt" id="g1">
+                                                        <option>강남고객본부</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <select class="form-control search-slt" id="g2" onchange="gg2()">
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <select class="form-control search-slt" id="g3" onchange="gg3()">
+                                                        <option>선택하세요</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <select class="form-control search-slt" id="g4">
+                                                        <option>선택하세요</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <p style="margin-top:5px;">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 col-sm-12">
+<!--                                                    <button type="button" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1;">검색-->
+<!--                                                    </button>-->
+<!--                                                    <button type="reset" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1;">Reset-->
+<!--                                                    </button>-->
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-lg-3">
-                                        <canvas id="myPieChart2"></canvas>
-                                        <br>
-                                        <p style="text-align:center;">성남시 분당구 백현동</p>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <canvas id="myPieChart3"></canvas>
-                                        <br>
-                                        <p style="text-align:center;">성남시 분당구 판교동</p>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <canvas id="myPieChart4"></canvas>
-                                        <br>
-                                        <p style="text-align:center;">성남시 분당구 삼평동</p>
-                                    </div>
+                                <br>
+                                <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <label class="text-white" for="inputEmail1" style="font-size:17px">특별시/도</label>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <label class="text-white" for="inputEmail2" style="font-size:17px">시/군/구</label>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <label class="text-white" for="inputEmail3" style="font-size:17px">읍/면/동</label>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <label class="text-white" for="inputEmail3" style="font-size:17px">번지</label>
+                                                </div>
+                                                <!-- <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <label class="text-white" for="inputEmail3" style="font-size:17px">BM 구분</label>
+                                                </div> -->
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <select class="form-control search-slt" id="add1">
+                                                        <option>경기도</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <select class="form-control search-slt" id="add2" onchange="add2()"> <!-- 시군구 -->
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <select class="form-control search-slt" id="add3"> <!-- 읍면동 -->
+                                                        <option>선택하세요</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <input type="text" class="form-control search-slt" placeholder="예) 45" id="param1"> <!-- 번지수 -->
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12" id="nope">
+                                                        <select class="form-control search-slt" id="param2"> <!-- 없어도 되지만 혹시 몰라서 둠-->
+                                                        <option>시설 구분</option>
+                                                        <option>초고속</option>
+                                                        <option>광전화</option>
+                                                        <option>전용</option>
+                                                        <option>기타</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <p style="margin-top:5px;">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 col-sm-12">
+                                                    <button type="button" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1; font-size:17px;" onclick="btn_click3()">검색
+                                                    </button>
+                                                    <button type="reset" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1; font-size:17px;">Reset
+                                                    </button>
+                                                    <button type="button" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1; font-size:17px;" id="excel">Excel 저장
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
                             </div>
-                        </div>
+                        </section>
                     </div>
+                </div>
             </div>
-            <!-- ★★변경 끝★★ -->
 
-            <div class="row">
+
+<!--            <div class="row">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                             주소 검색 (지번)
@@ -205,7 +300,6 @@
                                                     <input type="text" class="form-control search-slt" placeholder="예) 45" id="param1">
                                                 </div>
                                                 <div class="col-lg-2 col-md-2 col-sm-12">
-<!--                                                    <select class="form-control search-slt" id="exampleFormControlSelect1">-->
                                                     <select class="form-control search-slt" id="param2">
                                                         <option>시설 구분</option>
                                                         <option>초고속</option>
@@ -225,100 +319,90 @@
                                                 </div>
                                             </div>
                                         </div>
-
-                                    <!--★도로명 검색★-->
-<!--                                        <div class="col-lg-12">
-                                            <br>
-                                            <div class="row">
-                                                <div class="col-lg-2 col-md-2 col-sm-12">
-                                                    <label class="text-white" for="inputEmail1">도로명 검색 - 특별시/도</label>
-                                                </div>
-                                                <div class="col-lg-2 col-md-2 col-sm-12">
-                                                    <label class="text-white" for="inputEmail2">시/군/구</label>
-                                                </div>
-                                                <div class="col-lg-2 col-md-2 col-sm-12">
-                                                    <label class="text-white" for="inputEmail3">도로명</label>
-                                                </div>
-                                                <div class="col-lg-2 col-md-2 col-sm-12">
-                                                    <label class="text-white" for="inputEmail3">건물번호</label>
-                                                </div>
-                                                <div class="col-lg-2 col-md-2 col-sm-12">
-                                                    <label class="text-white" for="inputEmail3">BM 구분</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                            <div class="col-lg-2 col-md-2 col-sm-12">
-                                                <select class="form-control search-slt" id="add11">
-                                                    <option>경기도</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-lg-2 col-md-2 col-sm-12">
-                                                <select class="form-control search-slt" id="add22" onchange="add22()">
-                                                </select>
-                                            </div>
-                                            <div class="col-lg-2 col-md-2 col-sm-12">
-                                                <select class="form-control search-slt" id="add33">
-
-                                                </select>
-                                            </div>
-                                            <div class="col-lg-2 col-md-2 col-sm-12">
-                                                <input type="text" class="form-control search-slt" placeholder="예) 45">
-                                            </div>
-
-                                            <div class="col-lg-2 col-md-2 col-sm-12">
-                                                <select class="form-control search-slt" id="exampleFormControlSelect1">
-                                                    <option>시설 구분</option>
-                                                    <option>초고속</option>
-                                                    <option>전송</option>
-                                                    <option>전용</option>
-                                                    <option>기타</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                            <p style="margin-top:5px;">
-                                            <div class="row">
-                                                <div class="col-lg-3 col-md-3 col-sm-12">
-                                                    <button type="button" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1;" onclick="btn_click4()">검색
-                                                    </button>
-                                                    <button type="reset" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1;">Reset
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>-->
-                                        <!--★도로명 검색 끝★-->
-
                                     </div>
 
                                 <br>
 
-                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="true" aria-controls="collapseExample" style="color: #593cc1; background-color: #ffffff; border-color: #593cc1;">
-                                결과 확인
-                                </button>
-                                <!-- <button class="btn btn-primary" type="button" onclick="btn_click2();" style="color: #593cc1; background-color: #ffffff; border-color: #593cc1;">전체 검색</button> -->
 
-                                <div class="collapse" id="collapseExample">
-                                    <div class="card card-body">
-                                        <table id="tableData" class="table">
-                                            <thead id="head">
-                                            <tr>
-                                                <th scope="col">순번</th>
-                                                <th scope="col" style="width: 10%">건물명</th>
-                                                <th scope="col">건물유형</th>
-                                                <th scope="col">연면적(㎡)</th>
-                                                <th scope="col">최고 층 수</th>
-                                                <th scope="col">최저 층 수</th>
-                                                <th scope="col">지역</th>
-                                                <th scope="col">세대수</th>
-                                                <th scope="col" style="width: 25%">주소</th>
-                                                <th scope="col">인입광</th>
-                                            </tr>
-                                            </thead>
-                                        </table>
-
-                                    </div>
-                                </div>
                             </div>
+                        </section>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- ★★파이차트★★ -->
+            <div class="row">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="font-size:18px">
+                            지역별 시설 분포
+                        </div>
+                        <div class="panel-body">
+                            <div class="card-body row">
+                                    <div class="col-lg-3">
+                                        <canvas id="myPieChart"></canvas>
+                                        <br>
+                                        <p style="text-align:center; font-size:16px;" id="a1" class="test" >광주시 오포읍 신현리</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <canvas id="myPieChart2"></canvas>
+                                        <br>
+                                        <p style="text-align:center; font-size:16px;" id="a2" class="test">성남시 분당구 백현동</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <canvas id="myPieChart3"></canvas>
+                                        <br>
+                                        <p style="text-align:center; font-size:16px;" id="a3" class="test">성남시 분당구 판교동</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <canvas id="myPieChart4"></canvas>
+                                        <br>
+                                        <p style="text-align:center; font-size:16px;" id="a4" class="test">성남시 분당구 삼평동</p>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <p style="text-align:center;" id="a5" class="test1 jua">No result</p>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="true" aria-controls="collapseExample" style="color: #593cc1; background-color: #ffffff; border-color: #593cc1; font-size:17px;">
+                                결과 확인</button>
+            <!-- <button class="btn btn-primary" type="button" onclick="btn_click2();" style="color: #593cc1; background-color: #ffffff; border-color: #593cc1;">전체 검색</button> -->
+
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <table id="tableData" class="table">
+                        <thead id="head">
+                        <tr>
+                            <th scope="col">순번</th>
+                            <th scope="col" style="width: 10%">건물명</th>
+                            <th scope="col">건물유형</th>
+                            <th scope="col">연면적(㎡)</th>
+                            <th scope="col">최고 층 수</th>
+                            <th scope="col">최저 층 수</th>
+                            <!-- <th scope="col">지역</th> -->
+                            <th scope="col">세대수</th>
+                            <th scope="col" style="width: 25%">주소</th>
+                            <th scope="col">총 코어 수</th>
+                            <th scope="col">운용 코어 수</th>
+                            <th scope="col">초고속</th>
+                            <th scope="col">광전화</th>
+                            <th scope="col">전용</th>
+                            <th scope="col">무선</th>
+
+
+                        </tr>
+                        </thead>
+                    </table>
+
+                </div>
+            </div>
+
+            <br>
+
+
+
 
 
     <!-- jQuery -->
@@ -334,6 +418,12 @@
     <script src="../static/vendor/datatables/js/jquery.dataTables.min.js"></script>
     <script src="../static/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
     <script src="../static/vendor/datatables-responsive/dataTables.responsive.js"></script>
+
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.bootstrap4.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.1/js/buttons.print.min.js"></script>
+
 
 <!--    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
@@ -354,6 +444,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
 
+    <script type="text/javascript">
+    document.getElementById("nope").style.display = 'none'
+    </script>
 
     <script type="text/javascript">
 
@@ -373,7 +466,19 @@
                                       table.append(row)
                                     }
 
-
+        var list1 = JSON.parse('{{ list_chart1 | tojson | safe}}');
+        console.log(list1)
+        var ctx = document.getElementById("myPieChart");
+            var myPieChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                labels: ["무선", "광전화", "전용", "초고속" ],
+                datasets: [{
+                  data: list1,
+                  backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
+                }],
+              },
+            });
 
         var list2 = JSON.parse('{{ list_chart2 | tojson | safe}}');
         console.log(list2)
@@ -381,7 +486,7 @@
             var myPieChart = new Chart(ctx, {
               type: 'pie',
               data: {
-                labels: ["무선", "전송", "전용", "초고속" ],
+                labels: ["무선", "광전화", "전용", "초고속" ],
                 datasets: [{
                   data: list2,
                   backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
@@ -398,7 +503,7 @@
             var myPieChart = new Chart(ctx, {
               type: 'pie',
               data: {
-                labels: ["무선", "전송", "전용", "초고속" ],
+                labels: ["무선", "광전화", "전용", "초고속" ],
                 datasets: [{
                   data: list3,
                   backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
@@ -414,7 +519,7 @@
             var myPieChart = new Chart(ctx, {
               type: 'pie',
               data: {
-                labels: ["무선", "전송", "전용", "초고속" ],
+                labels: ["무선", "광전화", "전용", "초고속" ],
                 datasets: [{
                   data: list4,
                   backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
@@ -470,25 +575,6 @@
             });
         </script> -->
 
-
-    <script type="text/javascript">
-
-         var totaldata = JSON.parse('{{ add22 | tojson | safe}}');
-         locations = totaldata;
-          var row = `<option value="">선택하세요</option>`
-                                        var table = $('#add22')
-                                      table.append(row)
-                                    for (var i in locations){
-
-
-                                      var row = `
-                                                <option value="${locations[i][0]}">${locations[i][0]}</option>`
-                                        var table = $('#add22')
-                                      table.append(row)
-                                    }
-
-    </script>
-
     <script type="text/javascript">
            function add2() {
             var x = document.getElementById("add2").value;
@@ -510,8 +596,9 @@
 
                                       console.log(locations[i][0])
                                       var row = `
-                                                <option value=${locations[i][0]}>${locations[i][0]}</option>`
+                                                <option value="${locations[i][0]}">${locations[i][0]}</option>`
                                         var table = $('#add3')
+                                      console.log(row)
                                       table.append(row)
                                     }
                             }
@@ -560,7 +647,7 @@
     </script>
 
 
-        <script type="text/javascript">
+<!--        <script type="text/javascript">
             var ctx = document.getElementById("myPieChart");
             var myPieChart = new Chart(ctx, {
               type: 'pie',
@@ -573,14 +660,11 @@
               },
 
             });
-        </script>
+        </script> -->
 
 
 
-
-
-
-        <script type="text/javascript">
+<!--        <script type="text/javascript">
             var result;
 
             function btn_click2() {
@@ -590,7 +674,7 @@
             var param3 = document.getElementById('add3').value
             var param4 = document.getElementById('param1').value
             var param5 = document.getElementById('param2').value
-<!--            var param6 = document.getElementById('param6').value-->
+            var param6 = document.getElementById('param6').value
 
                                                 var t = $('#tableData').DataTable().destroy();
                                                 var t = $('#tableData').DataTable(
@@ -617,7 +701,7 @@
                                     itemid3:param3,
                                     itemid4:param4,
                                     itemid5:param5
-<!--                                    itemid6:param6-->
+                                    itemid6:param6
                                     },
                             dataType : 'JSON',
                             success : function(result)
@@ -631,21 +715,54 @@
                                                       locations[i][4],locations[i][5],locations[i][6],locations[i][7],
                                                       locations[i][8],locations[i][9]]).draw();
                                         }
+
                                 }
                     });
             }
-        </script>
+        </script> -->
 
         <script type="text/javascript">
 
+
             function btn_click3() {
-            console.log("1차 통과")
+;
+            var grapharea= document.getElementById("myPieChart").getContext("2d");
+            if(window.bar != undefined)
+                window.bar.destroy();
+                window.bar = new Chart(grapharea, {})
+
+            var grapharea= document.getElementById("myPieChart2").getContext("2d");
+            if(window.bar != undefined)
+                window.bar.destroy();
+                window.bar = new Chart(grapharea, {});
+
+            var grapharea= document.getElementById("myPieChart3").getContext("2d");
+            if(window.bar != undefined)
+                window.bar.destroy();
+                window.bar = new Chart(grapharea, {});
+
+            var grapharea= document.getElementById("myPieChart4").getContext("2d");
+                if(window.bar != undefined)
+                window.bar.destroy();
+                window.bar = new Chart(grapharea, {});
+
+            document.getElementById("myPieChart").style.display = 'none'
+            document.getElementById("myPieChart2").style.display = 'none'
+            document.getElementById("myPieChart3").style.display = 'none'
+            document.getElementById("myPieChart4").style.display = 'none'
+
+                                    var test = document.getElementsByClassName('test')
+                                    for (var i in test){
+                                        test[i].innerText = ""
+                                    }
+
+           console.log("1차 통과")
             var param1 = document.getElementById('add1').value
             var param2 = document.getElementById('add2').value
             var param3 = document.getElementById('add3').value
             var param4 = document.getElementById('param1').value
             var param5 = document.getElementById('param2').value
-<!--            var param6 = document.getElementById('param6').value-->
+
 
                                                 var t = $('#tableData').DataTable().destroy();
                                                 var t = $('#tableData').DataTable(
@@ -673,25 +790,150 @@
                                     itemid3:param3,
                                     itemid4:param4,
                                     itemid5:param5
-<!--                                    itemid6:param6-->
                                     },
                             dataType : 'JSON',
                             success : function(result)
                                 {
-                                var locations = result
+                                var locations = result[0]
                                         console.log(locations);
-                                        console.log(locations[0][0]);
+
                                         for (var i in locations){
                                               t.row.add(
-                                                     [locations[i][0], locations[i][1], locations[i][2], locations[i][3],
-                                                      locations[i][4],locations[i][5],locations[i][6],locations[i][7],
-                                                      locations[i][8],locations[i][9]]).draw();
+                                                     [locations[i][0], locations[i][3], locations[i][9], locations[i][8],
+                                                      locations[i][5],locations[i][6],locations[i][7],locations[i][4],
+                                                      locations[i][10],locations[i][11],locations[i][12],locations[i][13],locations[i][14],locations[i][15]]).draw();
                                         }
+
+
+                                    var table1 = $('#tableData').DataTable();
+
+                                    locations1 = result[1]
+                                    console.log("locaton1")
+                                    console.log(result[1])
+
+
+
+
+                                    var train2 = document.getElementsByTagName('canvas')
+                                    for (var i in locations1)
+                                    {
+                                        var train = [locations1[i][1], locations1[i][2], locations1[i][3], locations1[i][4]]
+                                        console.log(train)
+
+                                        var ctx = train2[i]
+                                                var myPieChart = new Chart(ctx, {
+                                                  type: 'pie',
+                                                  data: {
+                                                    labels: ["무선", "광전화", "전용", "초고속" ],
+                                                    datasets: [{
+                                                      data: train,
+                                                      backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
+                                                    }],
+                                                  },
+                                                });
+                                        train2[i].style.display = 'block'
+                                        test[i].innerText = locations1[i][0]
+                                    }
+                                    if (locations1 == "")
+                                     {
+                                        document.getElementById('a5').style.display = 'block';
+                                     }
+
+                                    var buttons = new $.fn.tableData.Buttons(table1, {
+                                             buttons: [
+
+                                               'excelHtml5'
+
+                                            ]
+                                        }).container().appendTo($('#excel'));
+
+
+
+
                                 }
                     });
             }
         </script>
 
+    <script type="text/javascript">
+
+         var totaldata = JSON.parse('{{ g22 | tojson | safe}}');
+         locations = totaldata;
+         console.log('totaldata');
+         console.log(totaldata);
+          var row = `<option value="">선택하세요</option>`
+                                        var table = $('#g2')
+                                      table.append(row)
+                                    for (var i in locations){
+
+                                        console.log(locations[i][0])
+                                      var row = `
+                                                <option value="${locations[i][0]}">${locations[i][0]}</option>`
+                                        var table = $('#g2')
+                                      table.append(row)
+                                    }
+    </script>
+
+    <script type="text/javascript">
+           function gg2() {
+            var x = document.getElementById("g2").value;
+            $('#g3').empty();
+            $('#g4').empty();
+            console.log('test')
+             $.ajax({
+                            type : 'POST',
+                            url : 'http://127.0.0.1:5000/group2',
+                            data : {
+                                    x_py: x
+                            },
+                            dataType : 'JSON',
+                            success : function(result){
+            locations = result[0];
+          var row = `<option value="">선택하세요</option>`
+                                        var table = $('#g3')
+                                      table.append(row)
+                                    for (var i in locations){
+
+                                      console.log(locations[i][0])
+                                      var row = `
+                                                <option value=${locations[i][0]}>${locations[i][0]}</option>`
+                                        var table = $('#g3')
+                                      table.append(row)
+                                    }
+                            }
+            });
+    };
+    </script>
+
+    <script type="text/javascript">
+           function gg3() {
+            var x = document.getElementById("g3").value;
+            $('#g4').empty();
+            console.log('test')
+             $.ajax({
+                            type : 'POST',
+                            url : 'http://127.0.0.1:5000/group3',
+                            data : {
+                                    x_py: x
+                            },
+                            dataType : 'JSON',
+                            success : function(result){
+            locations = result[0];
+          var row = `<option value="">선택하세요</option>`
+                                        var table = $('#g4')
+                                      table.append(row)
+                                    for (var i in locations){
+
+                                      console.log(locations[i][0])
+                                      var row = `
+                                                <option value=${locations[i][0]}>${locations[i][0]}</option>`
+                                        var table = $('#g4')
+                                      table.append(row)
+                                    }
+                            }
+            });
+    };
+    </script>
 
 
 </body>
