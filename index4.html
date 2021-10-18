@@ -64,54 +64,15 @@
                     <img src="../static/img/ktci2.png" alt="My Image" width=auto; height="50">
                     </div>
                 </span>
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand dohyeon" href="http://127.0.0.1:5000/" style="font-size: 25px; padding: 0px 40px;">　　　</a>
-            </div>
-            <!-- /.navbar-header -->
-
-            <ul class="nav navbar-top-links navbar-right">
-
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-user -->
-                </li>
-                <!-- /.dropdown -->
-            </ul>
-            <!-- /.navbar-top-links -->
+                <a class="navbar-brand dohyeon" href="http://127.0.0.1:5000/" style="font-size: 25px; padding: 0px 120px;">OSP 시설분석을 통한 인입광케이블 예측설계　</a>
 
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                          <li>
-                             <a href="http://127.0.0.1:5000/" style="font-size: 17px; color: #5a5a5a;"><i class="bi-lightbulb"></i> &nbsp;&nbsp;신축 건물 설계</a>
+                             <a href="http://127.0.0.1:5000/" style="font-size: 17px; color: #5a5a5a;"><i class="bi-lightbulb"></i> &nbsp;&nbsp;신축건물 인입광 설계</a>
                         <li>
-                            <a href="#" style="font-size: 17px; color: #5a5a5a;"><i class="bi-card-list"></i> &nbsp;상세 정보</a>
-                            <ul class="nav nav-second-level">
-<!--                                <li>-->
-<!--                                <a href="index3.html" style="font-size: 15px; color: #5a5a5a;"><i class="glyphicon glyphicon-list-alt"></i> &nbsp;전체 시설 현황</a>-->
-<!--                                </li>-->
-                                <li>
-                                <a href="index4.html" style="font-size: 17px; color: #5a5a5a;"><i class="glyphicon glyphicon-search"></i> &nbsp;&nbsp;기축 건물 현황</a>
-                                </li>
-                            </ul>
+                            <a href="index4.html" style="font-size: 17px; color: #5a5a5a;"><i class="glyphicon glyphicon-search"></i> &nbsp;&nbsp;기축건물 시설현황</a>
                         </li>
                     </ul>
                 </div>
@@ -175,15 +136,17 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <p style="margin-top:5px;">
+                                            <p style="margin-top:5px;"> </p>
+                                            <!-- 2021.10.18 수정 -->
                                             <div class="row">
                                                 <div class="col-lg-3 col-md-3 col-sm-12">
-<!--                                                    <button type="button" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1;">검색-->
-<!--                                                    </button>-->
-<!--                                                    <button type="reset" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1;">Reset-->
-<!--                                                    </button>-->
+                                                    <button type="button" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1; font-size:17px;" onclick="btn_click4()">검색
+                                                   </button>
+                                                    <button type="reset" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1; font-size:17px;">Reset
+                                                    </button>
                                                 </div>
                                             </div>
+                                            <!-- 2021.10.18 수정 끝-->
                                         </div>
                                     </div>
                                 <br>
@@ -213,19 +176,19 @@
                                                     </select>
                                                 </div>
                                                 <div class="col-lg-2 col-md-2 col-sm-12">
-                                                    <select class="form-control search-slt" id="add2" onchange="add2()"> <!-- 시군구 -->
+                                                    <select class="form-control search-slt" id="add2" onchange="add2()">
                                                     </select>
                                                 </div>
                                                 <div class="col-lg-2 col-md-2 col-sm-12">
-                                                    <select class="form-control search-slt" id="add3"> <!-- 읍면동 -->
+                                                    <select class="form-control search-slt" id="add3">
                                                         <option>선택하세요</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-lg-2 col-md-2 col-sm-12">
-                                                    <input type="text" class="form-control search-slt" placeholder="예) 45" id="param1"> <!-- 번지수 -->
+                                                    <input type="text" class="form-control search-slt" placeholder="예) 45" id="param1">
                                                 </div>
                                                 <div class="col-lg-2 col-md-2 col-sm-12" id="nope">
-                                                        <select class="form-control search-slt" id="param2"> <!-- 없어도 되지만 혹시 몰라서 둠-->
+                                                        <select class="form-control search-slt" id="param2">
                                                         <option>시설 구분</option>
                                                         <option>초고속</option>
                                                         <option>광전화</option>
@@ -241,12 +204,12 @@
                                                     </button>
                                                     <button type="reset" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1; font-size:17px;">Reset
                                                     </button>
-                                                    <button type="button" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1; font-size:17px;" id="excel">Excel 저장
-                                                    </button>
+<!--                                                    <button type="button" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1; font-size:17px;" id="excel">Excel 저장-->
+<!--                                                    </button>-->
                                                 </div>
                                             </div>
                                         </div>
-                                </div>
+                                    </div>
                             </div>
                         </section>
                     </div>
@@ -303,7 +266,7 @@
                                                     <select class="form-control search-slt" id="param2">
                                                         <option>시설 구분</option>
                                                         <option>초고속</option>
-                                                        <option>전송</option>
+                                                        <option>광전화</option>
                                                         <option>전용</option>
                                                         <option>기타</option>
                                                     </select>
@@ -333,7 +296,7 @@
             <!-- ★★파이차트★★ -->
             <div class="row">
                     <div class="panel panel-default">
-                        <div class="panel-heading" style="font-size:18px">
+                        <div class="panel-heading" style="font-size:18px; background-color: #B9AFF9; border-color: #B9AFF9;">
                             지역별 시설 분포
                         </div>
                         <div class="panel-body">
@@ -537,7 +500,7 @@
             var myPieChart = new Chart(ctx, {
               type: 'pie',
               data: {
-                labels: ["초고속", "전송", "광전화", "무선"],
+                labels: ["초고속", "광전화", "전용", "무선"],
                 datasets: [{
                   data: [12.21, 15.58, 11.25, 8.32],
                   backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
@@ -552,7 +515,7 @@
             var myPieChart = new Chart(ctx, {
               type: 'pie',
               data: {
-                labels: ["초고속", "전송", "광전화", "무선"],
+                labels: ["초고속", "광전화", "전용", "무선"],
                 datasets: [{
                   data: [12.21, 15.58, 11.25, 8.32],
                   backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
@@ -566,7 +529,7 @@
             var myPieChart = new Chart(ctx, {
               type: 'pie',
               data: {
-                labels: ["초고속", "전송", "광전화", "무선"],
+                labels: ["초고속", "광전화", "전용", "무선"],
                 datasets: [{
                   data: [12.21, 15.58, 11.25, 8.32],
                   backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
@@ -647,89 +610,15 @@
     </script>
 
 
-<!--        <script type="text/javascript">
-            var ctx = document.getElementById("myPieChart");
-            var myPieChart = new Chart(ctx, {
-              type: 'pie',
-              data: {
-                labels: ["초고속", "전송", "광전화", "무선"],
-                datasets: [{
-                  data: [12.21, 15.58, 11.25, 8.32],
-                  backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
-                }],
-              },
-
-            });
-        </script> -->
-
-
-
-<!--        <script type="text/javascript">
-            var result;
-
-            function btn_click2() {
-            console.log("1차 통과")
-            var param1 = document.getElementById('add1').value
-            var param2 = document.getElementById('add2').value
-            var param3 = document.getElementById('add3').value
-            var param4 = document.getElementById('param1').value
-            var param5 = document.getElementById('param2').value
-            var param6 = document.getElementById('param6').value
-
-                                                var t = $('#tableData').DataTable().destroy();
-                                                var t = $('#tableData').DataTable(
-                                                    {
-                                                        columnDefs: [
-                                                            { targets: '_all' }
-                                                        ],
-                                                        lengthChange: false,
-                                                        searching: false,
-                                                        ordering: false,
-                                                        info: false,
-                                                        paging: true
-                                                    }
-                                                );
-                                                t.clear();
-                                                t.draw();
-            console.log("2차 통과")
-            $.ajax({
-                            type : 'POST',
-                            url : 'http://127.0.0.1:5000/test2',
-                            data : {
-                                    itemid1:param1,
-                                    itemid2:param2,
-                                    itemid3:param3,
-                                    itemid4:param4,
-                                    itemid5:param5
-                                    itemid6:param6
-                                    },
-                            dataType : 'JSON',
-                            success : function(result)
-                                {
-                                var locations = result
-                                        console.log(locations);
-                                        console.log(locations[0][0]);
-                                        for (var i in locations){
-                                              t.row.add(
-                                                     [locations[i][0], locations[i][1], locations[i][2], locations[i][3],
-                                                      locations[i][4],locations[i][5],locations[i][6],locations[i][7],
-                                                      locations[i][8],locations[i][9]]).draw();
-                                        }
-
-                                }
-                    });
-            }
-        </script> -->
-
+        <!-- 2021.10.18 수정 -->
         <script type="text/javascript">
 
+            function btn_click4() {
 
-            function btn_click3() {
-;
             var grapharea= document.getElementById("myPieChart").getContext("2d");
             if(window.bar != undefined)
                 window.bar.destroy();
-                window.bar = new Chart(grapharea, {})
+                window.bar = new Chart(grapharea, {});
 
             var grapharea= document.getElementById("myPieChart2").getContext("2d");
             if(window.bar != undefined)
@@ -757,11 +646,130 @@
                                     }
 
            console.log("1차 통과")
+            var param1 = document.getElementById('g4').value
+
+                                                var t = $('#tableData').DataTable().destroy();
+                                                var t = $('#tableData').DataTable(
+                                                    {
+                                                        columnDefs: [
+                                                            { targets: '_all' }
+                                                        ],
+                                                        lengthChange: false,
+                                                        searching: false,
+                                                        ordering: false,
+                                                        info: false,
+                                                        paging: true
+                                                    }
+                                                );
+                                                t.clear();
+                                                t.draw();
+            console.log("2차 통과")
+            console.log(param1);
+            $.ajax({
+                            type : 'POST',
+                            url : 'http://127.0.0.1:5000/test4',
+                            data : {
+                                    itemid1:param1,
+                                    },
+                            dataType : 'JSON',
+                            success : function(result)
+                                {
+                                var locations = result[0]
+                                        console.log(locations);
+
+                                        for (var i in locations){
+                                              t.row.add(
+                                                     [locations[i][0], locations[i][3], locations[i][9], locations[i][8],
+                                                      locations[i][5],locations[i][6],locations[i][7],locations[i][4],
+                                                      locations[i][10],locations[i][11],locations[i][12],locations[i][13],locations[i][14],locations[i][15]]).draw();
+                                        }
+
+
+                                    var table1 = $('#tableData').DataTable();
+
+                                    locations1 = result[1]
+                                    console.log("locaton1")
+                                    console.log(result[1])
+
+
+                                    var train2 = document.getElementsByTagName('canvas')
+                                    for (var i in locations1)
+                                    {
+                                        var train = [locations1[i][1], locations1[i][2], locations1[i][3], locations1[i][4]]
+                                        console.log(train)
+
+                                        var ctx = train2[i]
+                                                var myPieChart = new Chart(ctx, {
+                                                  type: 'pie',
+                                                  data: {
+                                                    labels: ["무선", "광전화", "전용", "초고속" ],
+                                                    datasets: [{
+                                                      data: train,
+                                                      backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
+                                                    }],
+                                                  },
+                                                });
+                                        train2[i].style.display = 'block'
+                                        test[i].innerText = locations1[i][0]
+                                    }
+                                    if (locations1 == "")
+                                     {
+                                        document.getElementById('a5').style.display = 'block';
+                                     }
+                                }
+                    });
+            }
+        </script>
+
+        <!-- 2021.10.18 수정 끝-->
+
+
+
+        <script type="text/javascript">
+
+
+            function btn_click3() {
+
+            var grapharea= document.getElementById("myPieChart").getContext("2d");
+            if(window.bar != undefined)
+                window.bar.destroy();
+                window.bar = new Chart(grapharea, {});
+
+            var grapharea= document.getElementById("myPieChart2").getContext("2d");
+            if(window.bar != undefined)
+                window.bar.destroy();
+                window.bar = new Chart(grapharea, {});
+
+            var grapharea= document.getElementById("myPieChart3").getContext("2d");
+            if(window.bar != undefined)
+                window.bar.destroy();
+                window.bar = new Chart(grapharea, {});
+
+            var grapharea= document.getElementById("myPieChart4").getContext("2d");
+                if(window.bar != undefined)
+                window.bar.destroy();
+                window.bar = new Chart(grapharea, {});
+
+            document.getElementById("myPieChart").style.display = 'none'
+            document.getElementById("myPieChart2").style.display = 'none'
+            document.getElementById("myPieChart3").style.display = 'none'
+            document.getElementById("myPieChart4").style.display = 'none'
+
+                                    var test = document.getElementsByClassName('test')
+                                    for (var i in test){
+                                        test[i].innerText = ""
+                                    }
+           console.log("1차 통과")
             var param1 = document.getElementById('add1').value
             var param2 = document.getElementById('add2').value
             var param3 = document.getElementById('add3').value
             var param4 = document.getElementById('param1').value
             var param5 = document.getElementById('param2').value
+
+<!--            var param6 = document.getElementById('g1').value-->
+<!--            var param7 = document.getElementById('g2').value-->
+<!--            var param8 = document.getElementById('g3').value-->
+<!--            var param9 = document.getElementById('g4').value-->
 
 
                                                 var t = $('#tableData').DataTable().destroy();
@@ -790,6 +798,10 @@
                                     itemid3:param3,
                                     itemid4:param4,
                                     itemid5:param5
+<!--                                    itemid6:param6,-->
+<!--                                    itemid7:param7,-->
+<!--                                    itemid8:param8,-->
+<!--                                    itemid9:param9-->
                                     },
                             dataType : 'JSON',
                             success : function(result)
